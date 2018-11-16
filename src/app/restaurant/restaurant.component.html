@@ -1,0 +1,69 @@
+<div class="main-container" [ngClass]="{'web-mode':inWebMode}">
+    <div class="app-header">
+        <div class="text" (click)="inWebMode=!inWebMode">
+            Lunch Tyme
+        </div>
+        <img src="../../assets/img/icon_map@2x.png" class="icon" (click)="webMode()">
+        <img src="../../assets/img/ic_webBack@2x.png" class="back-icon" (click)="inMapMode=false" [hidden]="!inMapMode">
+    </div>
+    <div class="list-container" [hidden]="inMapMode">
+        <div *ngFor="let r of restaurants" class="r-item" [ngStyle]="{'background': '#fff url(' + r.backgroundImageURL + ') no-repeat 0 0'}" (click)="mapRestaurant(r)">
+            <img src="../../assets/img/cellGradientBackground@2x.png" class="gradient"/>
+            <div class="r-item-text-container">
+                <div class="r-item-header">
+                    {{r.name}}
+                </div>
+                <div class="r-item-category">
+                    {{r.category}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="map-container" [hidden]="!inMapMode || (inWebMode && !showMap)" [ngClass]="{'selected':doSlide}">
+        <!-- <div class="map-container" [hidden]="!inMapMode || (inWebMode && !showMap)"> -->
+        <div id="map"></div>
+        <div class="restaurant-info-container">
+            <div class="restaurant-info" *ngIf="selectedRestaurant.category!=undefined">
+                <div class="text">
+                    <div class="name">
+                        {{selectedRestaurant.name}}
+                    </div>
+                    <div class="category">
+                        {{selectedRestaurant.category}}
+                    </div>
+                </div>
+            </div>
+            <div class="restaurant-detail" *ngIf="selectedRestaurant.location!=undefined">
+                <div class="text">
+                    <div class="address">
+                        {{selectedRestaurant.location.address}}
+                    </div>
+                    <div class="city-state">
+                        {{selectedRestaurant.location.city}}, {{selectedRestaurant.location.state}} {{selectedRestaurant.location.postalCode}}
+                    </div>
+                    <div class="phone">
+                        {{selectedRestaurant.contact.formattedPhone}}
+                    </div>
+                    <div class="handle">
+                        @{{selectedRestaurant.contact.twitter}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="app-footer" [hidden]="inWebMode">
+        <div class="lunch-icon">
+            <img src="../../assets/img/tab_lunch@2x.png" />
+            <div class="icon-text">
+                lunch
+            </div>
+        </div>
+        <div class="internets-icon deselected">
+            <img src="../../assets/img/tab_internets@2x.png" />
+            <div class="icon-text">
+                internets
+            </div>
+        </div>
+    </div>
+</div>
