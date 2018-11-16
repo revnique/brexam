@@ -14,7 +14,7 @@ export class RestaurantComponent  implements OnInit {
   map:any;
 
   inMapMode:boolean = false;
-  inWebMode:boolean = true;
+  inWebMode:boolean = false;
   showMap:boolean = true;
   doSlide:boolean = false;
 

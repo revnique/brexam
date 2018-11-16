@@ -41,10 +41,10 @@
                     <div class="city-state">
                         {{selectedRestaurant.location.city}}, {{selectedRestaurant.location.state}} {{selectedRestaurant.location.postalCode}}
                     </div>
-                    <div class="phone">
+                    <div class="phone" *ngIf="selectedRestaurant.contact!=undefined">
                         {{selectedRestaurant.contact.formattedPhone}}
                     </div>
-                    <div class="handle">
+                    <div class="handle" *ngIf="selectedRestaurant.contact!=undefined">
                         @{{selectedRestaurant.contact.twitter}}
                     </div>
                 </div>
