@@ -39,15 +39,13 @@ export class RestaurantComponent  implements OnInit {
             //self.mapRestaurant(self.selectedRestaurant);
         });
     }
-    mapRestaurant(restaurant:any){
-        //alert(restaurant.name);
-        if(this.inWebMode){
-
-        }else{
-            this.inMapMode = true;
-        }
+    mapRestaurant(restaurant:any){        
+        this.inMapMode = true;
+        
         if(this.selectedRestaurant == restaurant){
             this.doSlide = !this.doSlide;
+        }else{
+            this.doSlide = true;
         }
         this.selectedRestaurant = restaurant;
         this.loadMap(restaurant);
@@ -98,10 +96,4 @@ export class RestaurantComponent  implements OnInit {
 
         return rtn;
     };
-
-    webMode(){
-
-    }
-
-
 }

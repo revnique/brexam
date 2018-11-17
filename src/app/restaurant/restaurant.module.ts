@@ -9,7 +9,7 @@ import { RestaurantComponent } from './restaurant.component';
 
 const RestaurantRoutes: Routes = [
     {
-        path: 'lunch',
+        path: '',
         component: RestaurantComponent,
         children:[
             { path: '', component: RestaurantComponent }
