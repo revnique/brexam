@@ -1,0 +1,44 @@
+
+.app-header{
+    height: 50px;
+    background-color: #43e895;
+    text-align: center;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+}
+.app-header .text{
+    font-size: 17px;
+    font-weight: 700;
+    color:#fff;
+    margin-top:20px;
+    display: inline-block;
+}
+.app-header .icon{
+    width: 25px;
+    position:absolute;
+    bottom:7px;
+    right: 15px;
+    cursor:pointer;
+}
+.app-header .left{
+    position:absolute;
+    bottom:7px;
+    left: 15px;
+}
+
+.app-header .left img{
+    float: left;
+    margin-right: 25px;
+    cursor:pointer;
+}
+
+.app-header .back-icon, 
+.app-header .fwd-icon{
+    width: 13px;
+}
+
+.app-header .ref-icon{
+    width: 30px;
+}

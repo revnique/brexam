@@ -1,0 +1,8 @@
+/deep/ body, div, span, h2, a{
+    font-family: 'Nunito';
+}
+
+
+/deep/ html, body{
+    height:100%;
+}

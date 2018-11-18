@@ -96,4 +96,9 @@ export class RestaurantComponent  implements OnInit {
 
         return rtn;
     };
+    functionOnStore(){
+        setTimeout(()=>{
+            this.inMapMode = false;
+        },5);
+    }
 }

@@ -1,0 +1,18 @@
+<div class="app-footer">
+    <div class="lunch-icon" [ngClass]="{'deselected':!lun.isActive}">
+        <a routerLink="/" routerLinkActive="" [routerLinkActiveOptions]="{exact:true}" #lun="routerLinkActive">
+            <img src="../../assets/img/tab_lunch@2x.png" />
+            <div class="icon-text">
+                lunch
+            </div>
+        </a>
+    </div>
+    <div class="internets-icon" [ngClass]="{'deselected':!inets.isActive}">
+        <a routerLink="/internets" routerLinkActive="" [routerLinkActiveOptions]="{exact:true}" #inets="routerLinkActive">
+            <img src="../../assets/img/tab_internets@2x.png" />
+            <div class="icon-text">
+                internets
+            </div>
+        </a>
+    </div>
+</div>

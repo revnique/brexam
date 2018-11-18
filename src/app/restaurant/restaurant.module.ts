@@ -6,6 +6,9 @@ import { HttpModule } from '@angular/http';
 
 import { RestaurantService } from './restaurant.service';
 import { RestaurantComponent } from './restaurant.component';
+import { InternetsComponent } from './internets.component';
+import { RestaurantHeader } from './restaurant.header';
+import { RestaurantFooter } from './restaurant.footer';
 
 const RestaurantRoutes: Routes = [
     {
@@ -13,6 +16,13 @@ const RestaurantRoutes: Routes = [
         component: RestaurantComponent,
         children:[
             { path: '', component: RestaurantComponent }
+        ]
+    },
+    {
+        path: 'internets',
+        component: InternetsComponent,
+        children:[
+            { path: '', component: InternetsComponent }
         ]
     }
 ]
@@ -30,7 +40,10 @@ const RestaurantRoutes: Routes = [
         RouterModule
     ],
     declarations:[        
-        RestaurantComponent
+        RestaurantComponent,
+        InternetsComponent,
+        RestaurantHeader,
+        RestaurantFooter
     ],
     providers:[
         RestaurantService
