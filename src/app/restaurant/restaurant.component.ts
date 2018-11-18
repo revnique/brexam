@@ -68,36 +68,20 @@ export class RestaurantComponent  implements OnInit {
             position: new google.maps.LatLng(r.location.lat, r.location.lng),
             map: self.map,
             icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=x|990000|ffffff',            
-            animation: google.maps.Animation.DROP
+            animation: google.maps.Animation.DROP            
         });
 
         google.maps.event.addListener(marker, 'click', (function (marker, i) {
             return function () {
-                infowindow.setContent(r.name);
+                let contentString= '<strong>' + r.name + '</strong><br>\
+            ' + r.location.address + '<br>' + r.location.city + ', ' + r.location.state + ' ' + r.location.postalCode + '<br>'
+                infowindow.setContent(contentString);
                 infowindow.open(self.map, marker);
             }
         })(marker, i));
         
     }
 
-    loadPoints(points:any) {
-        var rtn = [];
-        var dataPoints = [];
-        for (var i = 0; i < points.length; i++) {
-            let point = points[i];
-            var dataPoint = {
-                info: '<strong>' + point.Name + '</strong><br>\
-                ' + point.Address1 + '<br>' + point.City + ', ' + point.State + ' ' + point.Zip + '<br>',
-                lat: point.Lat,
-                long: point.Long
-            };
-            dataPoints.push(dataPoint);
-            var loc = [dataPoint.info, dataPoint.lat, dataPoint.long, i];
-            rtn.push(loc);
-        }
-
-        return rtn;
-    };
     endMapMode(){
         this.inMapMode = false;
     }
