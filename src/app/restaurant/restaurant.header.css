@@ -42,3 +42,9 @@
 .app-header .ref-icon{
     width: 30px;
 }
+
+@media screen and (min-width:1367px){
+    .left.lunch-mode{
+        display: none;
+    }
+}

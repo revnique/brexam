@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { InternetsComponent } from './internets.component';
 import { RestaurantComponent } from './restaurant.component';
@@ -11,8 +11,10 @@ import { RestaurantComponent } from './restaurant.component';
 })
 
 export class RestaurantHeader  implements OnInit {
+    @Output() evt = new EventEmitter();
     lunchMode:boolean = false;
     headerText:string = "";
+    mapMode:boolean = false;
 
     constructor(private route: ActivatedRoute){}
 
@@ -28,16 +30,19 @@ export class RestaurantHeader  implements OnInit {
                 this.lunchMode = true;
             }
         });
+        this.addEvents();
     }
 
-    myFunction(){
-        if(!this.lunchMode){
-            let internets = new InternetsComponent();
-            internets.functionOnStore();
-        }else{
-            let restaurant = new RestaurantComponent(null);
-            restaurant.functionOnStore();
-        }
+    backClick(){
+        this.evt.emit({"back":"clicked"});
+        this.mapMode = false;
+    }
+    
+    addEvents(){
+        document.addEventListener("isInMapMode", (e:any) => {
+            var data = e.detail;
+            this.mapMode = data.isInMapMode;
+        });
     }
 
 }

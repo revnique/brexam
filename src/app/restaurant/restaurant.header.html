@@ -4,8 +4,8 @@
         {{headerText}}
     </div>
     <img src="../../assets/img/icon_map@2x.png" class="icon" [hidden]="!lunchMode">
-    <div class="left">
-        <img src="../../assets/img/ic_webBack@2x.png" class="back-icon" (click)="myFunction()">
+    <div class="left" [ngClass]="{'lunch-mode':lunchMode}">
+        <img src="../../assets/img/ic_webBack@2x.png" class="back-icon" (click)="backClick()" [hidden]="!mapMode && lunchMode">
         <img src="../../assets/img/ic_webRefresh@2x.png" class="ref-icon" [hidden]="lunchMode">
         <img src="../../assets/img/ic_webForward@2x.png" class="fwd-icon" [hidden]="lunchMode">
     </div>

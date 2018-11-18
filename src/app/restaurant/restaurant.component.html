@@ -1,5 +1,5 @@
 <div class="main-container">
-    <r-header></r-header>
+    <r-header (evt)="endMapMode()"></r-header>
     <div class="list-container" [ngClass]="{'map-mode':inMapMode}">
         <div *ngFor="let r of restaurants" class="r-item ripple" [ngStyle]="{'background': '#fff url(' + r.backgroundImageURL + ') no-repeat 0 0'}" (click)="mapRestaurant(r)">
             <img src="../../assets/img/cellGradientBackground@2x.png" class="gradient"/>

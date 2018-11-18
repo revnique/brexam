@@ -41,6 +41,8 @@ export class RestaurantComponent  implements OnInit {
     }
     mapRestaurant(restaurant:any){        
         this.inMapMode = true;
+        this.dispatchCustomEvent('isInMapMode', { isInMapMode: true });
+
         
         if(this.selectedRestaurant == restaurant){
             this.doSlide = !this.doSlide;
@@ -96,9 +98,12 @@ export class RestaurantComponent  implements OnInit {
 
         return rtn;
     };
-    functionOnStore(){
-        setTimeout(()=>{
-            this.inMapMode = false;
-        },5);
+    endMapMode(){
+        this.inMapMode = false;
+    }
+    
+    dispatchCustomEvent(eventName:string, detailObj:any) {
+        var customEvent = new CustomEvent(eventName, { 'detail': detailObj });
+        document.dispatchEvent(customEvent);
     }
 }
