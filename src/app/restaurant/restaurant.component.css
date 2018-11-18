@@ -267,6 +267,9 @@ body, div, span, h2, a{
         background-size: 40% 40%;
         background-color: #efefef;
     }
+    .back-icon{
+        display: none;
+    }
     
 }
 
