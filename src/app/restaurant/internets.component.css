@@ -1,0 +1,18 @@
+
+.content{
+    position: absolute;
+    top:50px;
+    bottom:50px;
+    left:0;
+    right:0;
+    overflow-y: auto;
+}
+.content img{
+    width:100%;
+}
+
+@media screen and (min-width:1367px){
+    .content{
+        bottom:0px;
+    }
+}
