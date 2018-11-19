@@ -1,6 +1,16 @@
 # Brexam
-
+http://h1teq.com/brexam/
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
+
+## For the grader
+
+I coded for 4 viewports:
+iPhone 5/6/7/8/X (portrait/landscape) [should match blueprint]
+iPad (1024x768, landscape/portrait) [two column mapview]
+iPad Pro (1024x1366, landscape/portrait) [two column mapview]
+web (width > 1367) [slide out mapview]
+
+For the internets view I added an image of the blueprint because no assets or layout information was provided. This view is necessary to demonstrate the common header footer and event broadcasting.
 
 ## Development server
 
