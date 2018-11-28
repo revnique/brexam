@@ -1,7 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { InternetsComponent } from './internets.component';
-import { RestaurantComponent } from './restaurant.component';
 
 
 @Component({

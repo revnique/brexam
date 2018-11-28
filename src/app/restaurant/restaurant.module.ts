@@ -4,11 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { RestaurantService } from './restaurant.service';
+import { RestaurantService } from '../restaurant/service/restaurant.service';
 import { RestaurantComponent } from './restaurant.component';
-import { InternetsComponent } from './internets.component';
-import { RestaurantHeader } from './restaurant.header';
-import { RestaurantFooter } from './restaurant.footer';
+import { InternetsComponent } from '../internets/internets.component';
+import { RestaurantHeader } from '../restaurant/header/restaurant.header';
+import { RestaurantFooter } from '../restaurant/footer/restaurant.footer';
 
 const RestaurantRoutes: Routes = [
     {

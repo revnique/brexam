@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RestaurantService } from './restaurant.service'
+import { RestaurantService } from '../restaurant/service/restaurant.service'
 import {} from 'googlemaps';
 
 
