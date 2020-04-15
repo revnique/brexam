@@ -1,0 +1,86 @@
+
+.p-none { padding: 0 !important; }
+.p-t-none { padding-top: 0 !important; }
+.p-r-none { padding-right: 0 !important; }
+.p-b-none { padding-bottom: 0 !important; }
+.p-l-none { padding-left: 0 !important; }
+  
+.p-xsm { padding: 5px; }
+.p-t-xsm { padding-top: 5px; }
+.p-r-xsm { padding-right: 5px; }
+.p-b-xsm { padding-bottom: 5px; }
+.p-l-xsm { padding-left: 5px; }
+        
+.p-sm { padding: 10px; }
+.p-t-sm { padding-top: 10px; }
+.p-r-sm { padding-right: 10px; }
+.p-b-sm { padding-bottom: 10px; }
+.p-l-sm { padding-left: 10px; }     
+  
+.p-smd { padding: 12px; }
+.p-t-smd { padding-top: 12px; }
+.p-r-smd { padding-right: 12px; }
+.p-b-smd { padding-bottom: 12px; }
+.p-l-smd { padding-left: 12px; }   
+  
+.p-md { padding: 15px; }
+.p-t-md { padding-top: 15px; }
+.p-r-md { padding-right: 15px; }
+.p-b-md { padding-bottom: 15px; }
+.p-l-md { padding-left: 15px; }
+        
+.p-lg { padding: 25px; }
+.p-t-lg { padding-top: 25px; }
+.p-r-lg { padding-right: 25px; }
+.p-b-lg { padding-bottom: 25px; }
+.p-l-lg { padding-left: 25px; }
+
+.m-none { margin: 0 !important; }
+.m-t-none { margin-top: 0 !important; }
+.m-r-none { margin-right: 0 !important; }
+.m-b-none { margin-bottom: 0 !important; }
+.m-l-none { margin-left: 0 !important; }
+  
+.m-xsm { margin: 5px; }
+.m-t-xsm { margin-top: 5px; }
+.m-r-xsm { margin-right: 5px; }
+.m-b-xsm { margin-bottom: 5px; }
+.m-l-xsm { margin-left: 5px; }
+
+.m-sm { margin: 10px; }
+.m-t-sm { margin-top: 10px; }
+.m-r-sm { margin-right: 10px; }
+.m-b-sm { margin-bottom: 10px; }
+.m-l-sm { margin-left: 10px; }
+
+.m-smd { margin: 12px; }
+.m-t-smd { margin-top: 12px; }
+.m-r-smd { margin-right: 12px; }
+.m-b-smd { margin-bottom: 12px; }
+.m-l-smd { margin-left: 12px; }
+
+.m-md { margin: 15px; }
+.m-t-md { margin-top: 15px; }
+.m-r-md { margin-right: 15px; }
+.m-b-md { margin-bottom: 15px; }
+.m-l-md { margin-left: 15px; }
+
+.m-lg { margin: 25px; }
+.m-t-lg { margin-top: 25px; }
+.m-r-lg { margin-right: 25px; }
+.m-b-lg { margin-bottom: 25px; }
+.m-l-lg { margin-left: 25px; }
+
+.m-xl { margin: 35px; }
+.m-t-xl { margin-top: 35px; }
+.m-r-xl { margin-right: 35px; }
+.m-b-xl { margin-bottom: 35px; }
+.m-l-xl { margin-left: 35px; }
+  
+.txt-xsm { font-size: 7px; }
+.txt-sm { font-size: 9px; }
+.txt-smd { font-size: 11px; }
+.txt-md { font-size: 13px; }
+.txt-lg { font-size: 17px; }
+.txt-xl { font-size: 25px; }
+.txt-xxl { font-size: 35px; }
